@@ -1,0 +1,23 @@
+:root {
+  color-scheme: dark;
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  background: #102d38;
+  color: #fff;
+}
+
+* { box-sizing: border-box; }
+html, body { min-height: 100%; margin: 0; }
+body { min-width: 320px; }
+.landing { min-height: 100svh; background: #fff; }
+.brand { align-items: center; background: #fff; display: flex; height: clamp(7.25rem, 15.5vw, 12.75rem); justify-content: center; padding: 1.25rem 2rem; }
+.brand img { display: block; height: auto; max-width: min(18rem, 50vw); width: 100%; }
+.hero { align-items: center; display: flex; isolation: isolate; justify-content: center; min-height: max(39rem, calc(100svh - clamp(7.25rem, 15.5vw, 12.75rem))); overflow: hidden; padding: clamp(3.75rem, 8vw, 6.5rem) 1.5rem; position: relative; text-align: center; }
+.hero__backdrop { background: linear-gradient(90deg, rgba(8, 24, 33, .54), rgba(8, 24, 33, .31)), url("https://vinculoschiloe.cl/wp-content/uploads/2021/04/fotos_0002_2.jpg") center / cover no-repeat; inset: 0; position: absolute; z-index: -2; }
+.hero::after { background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(5,17,24,.28)); content: ""; inset: 0; position: absolute; z-index: -1; }
+.hero__content { max-width: 49rem; text-shadow: 0 2px 16px rgba(0,0,0,.45); }
+.hero__symbol { height: clamp(4.25rem, 7vw, 5.8rem); margin-bottom: 1.2rem; object-fit: contain; width: auto; }
+.eyebrow { font-size: .74rem; font-weight: 700; letter-spacing: .15em; margin: 0 0 1rem; text-transform: uppercase; }
+h1 { font-size: clamp(2rem, 4.2vw, 3.55rem); font-weight: 450; letter-spacing: -.035em; line-height: 1.13; margin: 0; }
+.rule { background: rgba(255,255,255,.88); height: 1px; margin: 2.2rem auto 1.65rem; max-width: 29rem; }
+.hero__summary { font-size: clamp(.96rem, 1.35vw, 1.1rem); line-height: 1.65; margin: .15rem auto; max-width: 42rem; }
+@media (max-width: 480px) { .brand { justify-content: flex-start; padding-left: 1.4rem; } .brand img { max-width: 12.5rem; } .hero { min-height: calc(100svh - 7.25rem); } .eyebrow { letter-spacing: .1em; } }
