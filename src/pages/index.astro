@@ -1,5 +1,14 @@
 ---
 import "../styles/global.css";
+
+const instagramPosts = [
+  "https://vinculoschiloe.cl/wp-content/uploads/sb-instagram-feed-images/790684050_1492700119289685_3754386078696979046_nthumb.webp",
+  "https://vinculoschiloe.cl/wp-content/uploads/sb-instagram-feed-images/791129814_17991020592038641_8043772897312833338_nthumb.webp",
+  "https://vinculoschiloe.cl/wp-content/uploads/sb-instagram-feed-images/782876232_1066030539125245_4217526006865051482_nthumb.webp",
+  "https://vinculoschiloe.cl/wp-content/uploads/sb-instagram-feed-images/788926796_17990510868038641_7287534098349865454_nthumb.webp",
+  "https://vinculoschiloe.cl/wp-content/uploads/sb-instagram-feed-images/787639434_1397800822421081_4350714888056588813_nthumb.webp",
+  "https://vinculoschiloe.cl/wp-content/uploads/sb-instagram-feed-images/786288372_17990222457038641_3730550018299028505_nthumb.webp",
+];
 ---
 
 <!doctype html>
@@ -28,6 +37,103 @@ import "../styles/global.css";
           <p class="hero__summary">En todo este proceso, la comunidad escolar reflexiona sobre qué, cómo y por qué están aprendiendo.</p>
         </div>
       </section>
+
+      <section class="announcements" aria-label="Información destacada">
+        <a class="announcement announcement--blue" href="https://forms.gle/3FHKEus2Ue1r3Lnu9">
+          <span class="announcement__number">01</span>
+          <div>
+            <p class="eyebrow">Escuela Vínculos Chiloé</p>
+            <h2>Matrícula 2026</h2>
+            <p>Formulario para regularizar situación de matrícula y lista de espera.</p>
+            <span class="text-link">Ingresar al formulario <span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+        <a class="announcement announcement--coral" href="https://vinculoschiloe.cl/cuentas-publicas/">
+          <span class="announcement__number">02</span>
+          <div>
+            <p class="eyebrow">Escuela Vínculos Chiloé</p>
+            <h2>Cuenta pública</h2>
+            <p>Revisa la información pública y el trabajo de nuestra comunidad educativa.</p>
+            <span class="text-link">Ver cuenta pública <span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+      </section>
+
+      <section class="instagram section" aria-labelledby="instagram-title">
+        <div class="section__intro">
+          <p class="section-kicker">La comunidad en movimiento</p>
+          <h2 id="instagram-title">Momentos que construyen aprendizaje</h2>
+          <p>Experiencias, oficios, territorio y encuentros cotidianos de nuestra comunidad escolar.</p>
+        </div>
+        <div class="post-grid">
+          {instagramPosts.map((post, index) => (
+            <a href="https://www.instagram.com/escuela.vinculos.chiloe/" aria-label={`Ver publicación ${index + 1} en Instagram`}>
+              <img src={post} alt="Actividad de la comunidad educativa Vínculos Chiloé" loading="lazy" />
+            </a>
+          ))}
+        </div>
+        <a class="button button--outline" href="https://www.instagram.com/escuela.vinculos.chiloe/">Seguir en Instagram</a>
+      </section>
+
+      <section class="community-callout" aria-labelledby="community-title">
+        <div class="community-callout__image" aria-hidden="true"></div>
+        <div class="community-callout__content">
+          <p class="section-kicker">Vínculos Chiloé</p>
+          <h2 id="community-title">Comunidad terapéutica de adultos</h2>
+          <p>Un espacio de acompañamiento, cuidado y reconstrucción de vínculos en nuestro territorio.</p>
+          <a class="button button--light" href="https://vinculoschiloe.cl/comunidad-terapeutica-2/">Conocer la comunidad</a>
+        </div>
+      </section>
+
+      <section class="visit section" aria-labelledby="visit-title">
+        <div class="section__intro">
+          <p class="section-kicker">Encuéntranos</p>
+          <h2 id="visit-title">Nos encontramos en Chiloé</h2>
+        </div>
+        <div class="locations">
+          <article>
+            <span>01</span>
+            <h3>Escuela Primaria Vínculos</h3>
+            <p>Av. Galvarino Riveros #2458, Castro, Chiloé</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Av.+Galvarino+Riveros+2458,+Castro,+Chile">Ver en el mapa ↗</a>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Comunidad Terapéutica Adultos</h3>
+            <p>Ubaldo Mancilla #115, Castro, Chiloé</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Ubaldo+Mancilla+115,+Castro,+Chile">Ver en el mapa ↗</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="about" aria-labelledby="about-title">
+        <div>
+          <p class="section-kicker">Quiénes somos</p>
+          <h2 id="about-title">Una educación que nace del vínculo</h2>
+        </div>
+        <div class="about__copy">
+          <p>Somos una institución sin fines de lucro que trabaja en educación con niños, niñas, adolescentes y personas adultas, en sectores urbanos y rurales de nuestra provincia y Archipiélago de Chiloé.</p>
+          <a href="tel:+56954004960" class="phone">+56 9 5400 4960</a>
+        </div>
+      </section>
+
+      <section class="methodology section" aria-labelledby="methodology-title">
+        <div class="section__intro">
+          <p class="section-kicker">Nuestra metodología educativa</p>
+          <h2 id="methodology-title">Aprendizaje Basado en Proyectos</h2>
+          <p>El ABP involucra a los estudiantes de manera activa en la adquisición de conocimientos y el desarrollo de habilidades a través de situaciones de la vida real.</p>
+        </div>
+        <div class="methodology__steps">
+          <article><span>01</span><h3>Preguntar</h3><p>Partimos desde preguntas reales de nuestro territorio.</p></article>
+          <article><span>02</span><h3>Investigar</h3><p>Observamos, indagamos y construimos saberes junto a la comunidad.</p></article>
+          <article><span>03</span><h3>Crear</h3><p>Transformamos lo aprendido en una respuesta concreta y compartida.</p></article>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__mark">Vínculos<br />Chiloé</div>
+        <div><p>Educación · Comunidad · Territorio</p><a href="https://www.facebook.com/VinculosChiloe/">Facebook</a><a href="https://www.instagram.com/vinculos.chiloe/">Instagram</a><a href="https://www.youtube.com/channel/UCFJIyopdf8ECBGukOeEaKGw">YouTube</a></div>
+      </footer>
     </main>
   </body>
 </html>
